@@ -5,15 +5,15 @@ box-sizing:border-box;
 font-family:'Segoe UI',sans-serif;
 }
 
-/* FONDO UPLA */
+/* FONDO */
 
 body{
 
 background:
 linear-gradient(
-rgba(15,32,39,0.55),
-rgba(32,58,67,0.55),
-rgba(44,83,100,0.55)
+rgba(15,32,39,0.6),
+rgba(32,58,67,0.6),
+rgba(44,83,100,0.6)
 ),
 url("UPLA.jpg");
 
@@ -42,8 +42,6 @@ top:0;
 
 }
 
-/* LOGO */
-
 .logo{
 
 display:flex;
@@ -59,8 +57,8 @@ color:#00eaff;
 
 .logo-img{
 
-width:100px;
-height:100px;
+width:95px;
+height:95px;
 
 background:white;
 
@@ -87,39 +85,76 @@ padding:40px;
 
 }
 
-/* FOTO */
-
 .foto-perfil{
 
-width:260px;
-height:260px;
+width:240px;
+height:240px;
 
 border-radius:50%;
 
-border:8px solid #00eaff;
+border:7px solid #00eaff;
 
 margin-bottom:20px;
 
-box-shadow:0 12px 35px rgba(0,0,0,0.7);
+}
+
+/* CARDS */
+
+.cards{
+
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+
+gap:30px;
 
 }
 
-/* TITULO */
+.card{
 
-.hero h1{
+background:white;
+color:black;
 
-font-size:50px;
-color:#00eaff;
+padding:25px;
+
+width:260px;
+
+border-radius:18px;
+
+box-shadow:0 10px 25px rgba(0,0,0,0.6);
 
 }
 
-/* DESCRIPCION */
+/* BOTONES IMPORTANTES */
 
-.descripcion{
+.btn-doc{
 
-width:70%;
-font-size:21px;
-line-height:1.9;
+display:inline-block;
+
+margin-top:12px;
+margin-right:6px;
+
+padding:10px 16px;
+
+background:linear-gradient(
+45deg,
+#00eaff,
+#0077ff
+);
+
+color:white;
+
+border-radius:25px;
+
+text-decoration:none;
+
+font-weight:bold;
+
+}
+
+.btn-doc:hover{
+
+transform:scale(1.05);
 
 }
 
@@ -147,82 +182,12 @@ width:280px;
 
 text-align:center;
 
-box-shadow:0 12px 30px rgba(0,0,0,0.6);
-
-border:3px solid #00eaff;
-
 }
 
 .tool img{
 
-width:130px;
-height:130px;
-
-object-fit:contain;
-
-margin-bottom:15px;
-
-}
-
-/* GALERIA SEMANAS */
-
-.galeria{
-
-display:flex;
-justify-content:center;
-gap:30px;
-flex-wrap:wrap;
-
-margin-top:40px;
-
-}
-
-.semana{
-
-background:white;
-color:black;
-
-padding:25px;
-
-border-radius:18px;
-
-width:260px;
-
-text-align:center;
-
-border:3px solid #0077ff;
-
-box-shadow:0 10px 25px rgba(0,0,0,0.6);
-
-}
-
-.semana button{
-
-margin-top:15px;
-
-padding:12px 20px;
-
-background:linear-gradient(
-45deg,
-#00eaff,
-#0077ff
-);
-
-color:white;
-
-border:none;
-
-border-radius:25px;
-
-font-weight:bold;
-
-cursor:pointer;
-
-}
-
-.semana button:hover{
-
-transform:scale(1.05);
+width:120px;
+margin-bottom:10px;
 
 }
 
@@ -240,10 +205,6 @@ border-radius:18px;
 width:320px;
 
 margin:auto;
-
-text-align:center;
-
-border:3px solid #00eaff;
 
 }
 
