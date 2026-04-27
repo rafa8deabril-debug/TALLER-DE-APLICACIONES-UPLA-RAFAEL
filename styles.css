@@ -1,13 +1,17 @@
-/* RESET */
+/* ========================= */
+/* RESET GENERAL */
+/* ========================= */
 
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Segoe UI', 'Trebuchet MS', sans-serif;
+font-family:'Segoe UI','Trebuchet MS',sans-serif;
 }
 
-/* FONDO */
+/* ========================= */
+/* FONDO GENERAL */
+/* ========================= */
 
 body{
 
@@ -24,7 +28,9 @@ scroll-behavior:smooth;
 
 }
 
+/* ========================= */
 /* NAVBAR */
+/* ========================= */
 
 nav{
 
@@ -34,7 +40,7 @@ align-items:center;
 
 padding:20px 50px;
 
-background:rgba(0,0,0,0.65);
+background:rgba(0,0,0,0.7);
 
 position:sticky;
 top:0;
@@ -45,7 +51,7 @@ z-index:1000;
 
 }
 
-/* LOGO */
+/* LOGO + NOMBRE */
 
 .logo{
 
@@ -54,7 +60,7 @@ align-items:center;
 
 gap:15px;
 
-font-size:21px;
+font-size:22px;
 font-weight:bold;
 
 color:#00eaff;
@@ -65,8 +71,8 @@ color:#00eaff;
 
 .logo-img{
 
-width:70px;
-height:70px;
+width:75px;
+height:75px;
 
 object-fit:contain;
 
@@ -76,7 +82,7 @@ border-radius:12px;
 
 padding:6px;
 
-box-shadow:0 6px 15px rgba(0,0,0,0.5);
+box-shadow:0 6px 15px rgba(0,0,0,0.6);
 
 }
 
@@ -102,15 +108,23 @@ font-weight:500;
 
 transition:0.3s;
 
+padding:6px 10px;
+
+border-radius:6px;
+
 }
 
 nav ul li a:hover{
 
-color:#00eaff;
+background:#00eaff;
+
+color:black;
 
 }
 
+/* ========================= */
 /* HERO */
+/* ========================= */
 
 .hero{
 
@@ -131,8 +145,8 @@ padding:40px;
 
 .foto-perfil{
 
-width:190px;
-height:190px;
+width:200px;
+height:200px;
 
 border-radius:50%;
 
@@ -140,9 +154,11 @@ object-fit:cover;
 
 border:6px solid #00eaff;
 
-margin-bottom:20px;
+margin-bottom:25px;
 
-box-shadow:0 10px 30px rgba(0,0,0,0.7);
+box-shadow:0 10px 30px rgba(0,0,0,0.8);
+
+animation: aparecer 2s ease;
 
 }
 
@@ -150,7 +166,7 @@ box-shadow:0 10px 30px rgba(0,0,0,0.7);
 
 .hero h1{
 
-font-size:48px;
+font-size:50px;
 
 color:#00eaff;
 
@@ -172,7 +188,9 @@ color:#e0f7ff;
 
 }
 
+/* ========================= */
 /* SECCIONES */
+/* ========================= */
 
 section{
 
@@ -180,13 +198,15 @@ padding:80px 40px;
 
 text-align:center;
 
+animation: fadeIn 1.5s;
+
 }
 
 /* TITULOS */
 
 h2{
 
-font-size:34px;
+font-size:36px;
 
 color:#00eaff;
 
@@ -194,7 +214,9 @@ margin-bottom:30px;
 
 }
 
+/* ========================= */
 /* CARDS */
+/* ========================= */
 
 .cards{
 
@@ -220,7 +242,7 @@ width:320px;
 
 border-radius:20px;
 
-box-shadow:0 12px 28px rgba(0,0,0,0.45);
+box-shadow:0 12px 28px rgba(0,0,0,0.5);
 
 transition:0.3s;
 
@@ -228,17 +250,31 @@ text-align:left;
 
 }
 
-/* HOVER */
+/* ICONOS */
 
-.card:hover{
+.card i{
 
-transform:translateY(-12px);
+font-size:40px;
 
-box-shadow:0 18px 35px rgba(0,0,0,0.6);
+margin-bottom:12px;
+
+color:#0077ff;
 
 }
 
+/* HOVER CARD */
+
+.card:hover{
+
+transform:translateY(-12px) scale(1.02);
+
+box-shadow:0 18px 35px rgba(0,0,0,0.7);
+
+}
+
+/* ========================= */
 /* BOTONES */
+/* ========================= */
 
 .btn-doc{
 
@@ -246,7 +282,7 @@ display:inline-block;
 
 margin-top:18px;
 
-padding:12px 20px;
+padding:12px 22px;
 
 background:#00eaff;
 
@@ -268,9 +304,13 @@ background:#0077ff;
 
 color:white;
 
+transform:scale(1.05);
+
 }
 
+/* ========================= */
 /* UNIDADES */
+/* ========================= */
 
 #unidad1{
 
@@ -292,7 +332,95 @@ border-bottom:3px solid #0077ff;
 
 }
 
+/* ========================= */
+/* HABILIDADES */
+/* ========================= */
+
+.skills{
+
+max-width:600px;
+
+margin:auto;
+
+}
+
+.skill{
+
+margin-bottom:20px;
+
+text-align:left;
+
+}
+
+.skill p{
+
+margin-bottom:6px;
+
+font-weight:bold;
+
+}
+
+/* BARRA */
+
+.barra{
+
+background:rgba(255,255,255,0.2);
+
+height:14px;
+
+border-radius:10px;
+
+overflow:hidden;
+
+}
+
+/* PROGRESO */
+
+.progreso{
+
+height:100%;
+
+background:#00eaff;
+
+border-radius:10px;
+
+animation:cargar 2s ease;
+
+}
+
+/* NIVELES */
+
+.p1{
+
+width:85%;
+
+}
+
+.p2{
+
+width:80%;
+
+}
+
+.p3{
+
+width:90%;
+
+}
+
+/* ========================= */
+/* CONTACTO */
+/* ========================= */
+
+#contacto .card{
+
+text-align:center;
+
+}
+
+/* ========================= */
 /* FOOTER */
+/* ========================= */
 
 footer{
 
@@ -305,5 +433,117 @@ text-align:center;
 margin-top:50px;
 
 font-size:15px;
+
+opacity:0.9;
+
+}
+
+/* ========================= */
+/* ANIMACIONES */
+/* ========================= */
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes aparecer{
+
+from{
+
+opacity:0;
+transform:scale(0.7);
+
+}
+
+to{
+
+opacity:1;
+transform:scale(1);
+
+}
+
+}
+
+@keyframes cargar{
+
+from{
+
+width:0;
+
+}
+
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media(max-width:900px){
+
+.hero h1{
+
+font-size:38px;
+
+}
+
+.descripcion{
+
+width:90%;
+
+}
+
+nav{
+
+flex-direction:column;
+
+gap:12px;
+
+}
+
+nav ul{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.card{
+
+width:90%;
+
+}
+
+.logo-img{
+
+width:60px;
+height:60px;
+
+}
+
+.foto-perfil{
+
+width:150px;
+height:150px;
+
+}
 
 }
