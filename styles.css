@@ -23,6 +23,7 @@ background: linear-gradient(
 );
 
 color:white;
+
 scroll-behavior:smooth;
 
 }
@@ -39,7 +40,7 @@ align-items:center;
 
 padding:18px 40px;
 
-background:rgba(0,0,0,0.5);
+background:rgba(0,0,0,0.55);
 
 position:sticky;
 top:0;
@@ -50,18 +51,46 @@ z-index:1000;
 
 }
 
-/* NOMBRE */
+/* ========================= */
+/* LOGO + NOMBRE */
+/* ========================= */
 
 .logo{
 
-font-size:22px;
+display:flex;
+align-items:center;
+
+gap:12px;
+
+font-size:20px;
 font-weight:bold;
 
 color:#00eaff;
 
 }
 
+/* LOGO */
+
+.logo-img{
+
+width:48px;
+height:48px;
+
+object-fit:contain;
+
+background:white;
+
+border-radius:8px;
+
+padding:4px;
+
+box-shadow:0 4px 10px rgba(0,0,0,0.4);
+
+}
+
+/* ========================= */
 /* MENU */
+/* ========================= */
 
 nav ul{
 
@@ -73,8 +102,6 @@ gap:25px;
 
 }
 
-/* LINKS */
-
 nav ul li a{
 
 color:white;
@@ -85,18 +112,24 @@ font-weight:500;
 
 transition:0.3s;
 
+padding:6px 10px;
+
+border-radius:6px;
+
 }
 
-/* HOVER */
+/* HOVER MENU */
 
 nav ul li a:hover{
 
-color:#00eaff;
+background:#00eaff;
+
+color:black;
 
 }
 
 /* ========================= */
-/* HERO / PRESENTACION */
+/* HERO */
 /* ========================= */
 
 .hero{
@@ -104,18 +137,13 @@ color:#00eaff;
 height:85vh;
 
 display:flex;
-
 flex-direction:column;
-
 justify-content:center;
-
 align-items:center;
 
 text-align:center;
 
 padding:30px;
-
-animation:fadeIn 1.5s;
 
 }
 
@@ -123,7 +151,7 @@ animation:fadeIn 1.5s;
 
 .hero h1{
 
-font-size:48px;
+font-size:46px;
 
 color:#00eaff;
 
@@ -155,8 +183,6 @@ padding:70px 40px;
 
 text-align:center;
 
-animation:fadeIn 1.5s;
-
 }
 
 /* TITULOS */
@@ -175,15 +201,11 @@ margin-bottom:25px;
 
 h4{
 
-font-size:18px;
-
-margin-top:8px;
+color:#0077ff;
 
 margin-bottom:10px;
 
-color:#0077ff;
-
-font-weight:bold;
+font-size:18px;
 
 }
 
@@ -194,14 +216,11 @@ font-weight:bold;
 .cards{
 
 display:flex;
-
 justify-content:center;
 
 flex-wrap:wrap;
 
 gap:25px;
-
-margin-top:25px;
 
 }
 
@@ -233,6 +252,8 @@ text-align:left;
 
 transform:translateY(-10px) scale(1.02);
 
+box-shadow:0 15px 30px rgba(0,0,0,0.6);
+
 }
 
 /* TITULO CARD */
@@ -245,7 +266,7 @@ color:#0077ff;
 
 }
 
-/* TEXTO CARD */
+/* TEXTO */
 
 .card p{
 
@@ -294,42 +315,36 @@ transform:scale(1.05);
 }
 
 /* ========================= */
-/* SEPARACION POR UNIDADES */
+/* UNIDAD I */
 /* ========================= */
 
 #unidad1{
 
 background:rgba(0,0,0,0.25);
 
-border-top:2px solid #00eaff;
+border-top:3px solid #00eaff;
 
-border-bottom:2px solid #00eaff;
+border-bottom:3px solid #00eaff;
 
 }
+
+/* ========================= */
+/* UNIDAD II */
+/* ========================= */
 
 #unidad2{
 
 background:rgba(0,0,0,0.25);
 
-border-top:2px solid #0077ff;
+border-top:3px solid #0077ff;
 
-border-bottom:2px solid #0077ff;
+border-bottom:3px solid #0077ff;
 
 }
 
 /* ========================= */
-/* CONTACTO */
-/* ========================= */
-
-#contacto .card{
-
-text-align:center;
-
-font-size:16px;
-
-}
-
 /* ICONOS */
+/* ========================= */
 
 .card i{
 
@@ -357,31 +372,7 @@ margin-top:40px;
 
 font-size:14px;
 
-opacity:0.85;
-
-}
-
-/* ========================= */
-/* ANIMACIONES */
-/* ========================= */
-
-@keyframes fadeIn{
-
-from{
-
-opacity:0;
-
-transform:translateY(40px);
-
-}
-
-to{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
+opacity:0.9;
 
 }
 
@@ -432,6 +423,13 @@ width:90%;
 .hero h1{
 
 font-size:28px;
+
+}
+
+.logo-img{
+
+width:40px;
+height:40px;
 
 }
 
