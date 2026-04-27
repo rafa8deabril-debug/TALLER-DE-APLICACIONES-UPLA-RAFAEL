@@ -10,17 +10,22 @@ font-family:'Segoe UI','Trebuchet MS',sans-serif;
 }
 
 /* ========================= */
-/* FONDO GENERAL */
+/* FONDO UPLA */
 /* ========================= */
 
 body{
 
-background: linear-gradient(
-135deg,
-#0f2027,
-#203a43,
-#2c5364
-);
+background:
+linear-gradient(
+rgba(15,32,39,0.88),
+rgba(32,58,67,0.88),
+rgba(44,83,100,0.88)
+),
+url("UPLA.jpg");
+
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
 
 color:white;
 
@@ -40,7 +45,7 @@ align-items:center;
 
 padding:20px 50px;
 
-background:rgba(0,0,0,0.7);
+background:rgba(0,0,0,0.75);
 
 position:sticky;
 top:0;
@@ -51,7 +56,7 @@ z-index:1000;
 
 }
 
-/* LOGO + NOMBRE */
+/* LOGO */
 
 .logo{
 
@@ -67,20 +72,18 @@ color:#00eaff;
 
 }
 
-/* LOGO UPLA */
+/* LOGO IMG */
 
 .logo-img{
 
-width:75px;
-height:75px;
-
-object-fit:contain;
+width:85px;
+height:85px;
 
 background:white;
 
-border-radius:12px;
-
 padding:6px;
+
+border-radius:12px;
 
 box-shadow:0 6px 15px rgba(0,0,0,0.6);
 
@@ -90,11 +93,10 @@ box-shadow:0 6px 15px rgba(0,0,0,0.6);
 
 nav ul{
 
-list-style:none;
-
 display:flex;
-
 gap:25px;
+
+list-style:none;
 
 }
 
@@ -128,16 +130,18 @@ color:black;
 
 .hero{
 
-min-height:90vh;
+min-height:95vh;
 
 display:flex;
 flex-direction:column;
-justify-content:center;
 align-items:center;
+justify-content:center;
 
 text-align:center;
 
 padding:40px;
+
+animation:fadeIn 2s ease;
 
 }
 
@@ -145,20 +149,20 @@ padding:40px;
 
 .foto-perfil{
 
-width:200px;
-height:200px;
+width:210px;
+height:210px;
 
 border-radius:50%;
-
-object-fit:cover;
 
 border:6px solid #00eaff;
 
 margin-bottom:25px;
 
-box-shadow:0 10px 30px rgba(0,0,0,0.8);
+object-fit:cover;
 
-animation: aparecer 2s ease;
+box-shadow:0 12px 35px rgba(0,0,0,0.8);
+
+animation:aparecer 2s ease;
 
 }
 
@@ -166,11 +170,11 @@ animation: aparecer 2s ease;
 
 .hero h1{
 
-font-size:50px;
+font-size:52px;
 
 color:#00eaff;
 
-margin-bottom:18px;
+margin-bottom:20px;
 
 }
 
@@ -178,11 +182,11 @@ margin-bottom:18px;
 
 .descripcion{
 
-font-size:20px;
-
 width:70%;
 
-line-height:1.8;
+font-size:21px;
+
+line-height:1.9;
 
 color:#e0f7ff;
 
@@ -194,11 +198,9 @@ color:#e0f7ff;
 
 section{
 
-padding:80px 40px;
+padding:90px 40px;
 
-text-align:center;
-
-animation: fadeIn 1.5s;
+animation:fadeIn 1.5s ease;
 
 }
 
@@ -206,11 +208,13 @@ animation: fadeIn 1.5s;
 
 h2{
 
-font-size:36px;
+font-size:38px;
 
 color:#00eaff;
 
-margin-bottom:30px;
+text-align:center;
+
+margin-bottom:35px;
 
 }
 
@@ -221,10 +225,12 @@ margin-bottom:30px;
 .cards{
 
 display:flex;
+
 justify-content:center;
+
 flex-wrap:wrap;
 
-gap:30px;
+gap:35px;
 
 }
 
@@ -238,15 +244,21 @@ color:black;
 
 padding:30px;
 
-width:320px;
+width:330px;
 
 border-radius:20px;
 
-box-shadow:0 12px 28px rgba(0,0,0,0.5);
+box-shadow:0 15px 30px rgba(0,0,0,0.6);
 
 transition:0.3s;
 
-text-align:left;
+}
+
+.card:hover{
+
+transform:translateY(-12px) scale(1.02);
+
+box-shadow:0 20px 40px rgba(0,0,0,0.8);
 
 }
 
@@ -254,21 +266,11 @@ text-align:left;
 
 .card i{
 
-font-size:40px;
+font-size:42px;
 
 margin-bottom:12px;
 
 color:#0077ff;
-
-}
-
-/* HOVER CARD */
-
-.card:hover{
-
-transform:translateY(-12px) scale(1.02);
-
-box-shadow:0 18px 35px rgba(0,0,0,0.7);
 
 }
 
@@ -282,7 +284,7 @@ display:inline-block;
 
 margin-top:18px;
 
-padding:12px 22px;
+padding:13px 24px;
 
 background:#00eaff;
 
@@ -309,26 +311,58 @@ transform:scale(1.05);
 }
 
 /* ========================= */
-/* UNIDADES */
+/* GALERIA */
 /* ========================= */
 
-#unidad1{
+.galeria{
 
-background:rgba(0,0,0,0.25);
+display:flex;
 
-border-top:3px solid #00eaff;
+flex-wrap:wrap;
 
-border-bottom:3px solid #00eaff;
+justify-content:center;
+
+gap:25px;
+
+margin-top:40px;
 
 }
 
-#unidad2{
+.galeria img{
 
-background:rgba(0,0,0,0.25);
+width:280px;
 
-border-top:3px solid #0077ff;
+height:200px;
 
-border-bottom:3px solid #0077ff;
+object-fit:cover;
+
+border-radius:15px;
+
+box-shadow:0 10px 25px rgba(0,0,0,0.6);
+
+transition:0.3s;
+
+}
+
+.galeria img:hover{
+
+transform:scale(1.05);
+
+}
+
+/* ========================= */
+/* PROYECTOS */
+/* ========================= */
+
+.proyectos{
+
+display:flex;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:30px;
 
 }
 
@@ -338,7 +372,7 @@ border-bottom:3px solid #0077ff;
 
 .skills{
 
-max-width:600px;
+max-width:650px;
 
 margin:auto;
 
@@ -346,15 +380,13 @@ margin:auto;
 
 .skill{
 
-margin-bottom:20px;
-
-text-align:left;
+margin-bottom:25px;
 
 }
 
 .skill p{
 
-margin-bottom:6px;
+margin-bottom:8px;
 
 font-weight:bold;
 
@@ -364,11 +396,11 @@ font-weight:bold;
 
 .barra{
 
-background:rgba(255,255,255,0.2);
+background:rgba(255,255,255,0.3);
 
-height:14px;
+height:16px;
 
-border-radius:10px;
+border-radius:12px;
 
 overflow:hidden;
 
@@ -382,31 +414,17 @@ height:100%;
 
 background:#00eaff;
 
-border-radius:10px;
+border-radius:12px;
 
-animation:cargar 2s ease;
+animation:cargar 2.5s ease;
 
 }
 
 /* NIVELES */
 
-.p1{
-
-width:85%;
-
-}
-
-.p2{
-
-width:80%;
-
-}
-
-.p3{
-
-width:90%;
-
-}
+.p1{width:85%;}
+.p2{width:80%;}
+.p3{width:90%;}
 
 /* ========================= */
 /* CONTACTO */
@@ -426,15 +444,15 @@ footer{
 
 background:black;
 
-padding:25px;
-
 text-align:center;
+
+padding:28px;
 
 margin-top:50px;
 
 font-size:15px;
 
-opacity:0.9;
+opacity:0.95;
 
 }
 
@@ -465,7 +483,7 @@ transform:translateY(0);
 from{
 
 opacity:0;
-transform:scale(0.7);
+transform:scale(0.6);
 
 }
 
@@ -496,7 +514,7 @@ width:0;
 
 .hero h1{
 
-font-size:38px;
+font-size:40px;
 
 }
 
@@ -534,15 +552,15 @@ width:90%;
 
 .logo-img{
 
-width:60px;
-height:60px;
+width:65px;
+height:65px;
 
 }
 
 .foto-perfil{
 
-width:150px;
-height:150px;
+width:160px;
+height:160px;
 
 }
 
