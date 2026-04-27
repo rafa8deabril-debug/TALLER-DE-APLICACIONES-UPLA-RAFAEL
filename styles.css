@@ -1,25 +1,19 @@
-/* ========================= */
-/* RESET GENERAL */
-/* ========================= */
-
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Segoe UI','Trebuchet MS',sans-serif;
+font-family:'Segoe UI',sans-serif;
 }
 
-/* ========================= */
-/* FONDO UPLA */
-/* ========================= */
+/* FONDO UPLA MENOS OPACO */
 
 body{
 
 background:
 linear-gradient(
-rgba(15,32,39,0.88),
-rgba(32,58,67,0.88),
-rgba(44,83,100,0.88)
+rgba(15,32,39,0.55),
+rgba(32,58,67,0.55),
+rgba(44,83,100,0.55)
 ),
 url("UPLA.jpg");
 
@@ -29,13 +23,9 @@ background-attachment:fixed;
 
 color:white;
 
-scroll-behavior:smooth;
-
 }
 
-/* ========================= */
 /* NAVBAR */
-/* ========================= */
 
 nav{
 
@@ -50,10 +40,6 @@ background:rgba(0,0,0,0.75);
 position:sticky;
 top:0;
 
-backdrop-filter:blur(10px);
-
-z-index:1000;
-
 }
 
 /* LOGO */
@@ -62,71 +48,29 @@ z-index:1000;
 
 display:flex;
 align-items:center;
-
 gap:15px;
 
-font-size:22px;
+font-size:23px;
 font-weight:bold;
 
 color:#00eaff;
 
 }
 
-/* LOGO IMG */
-
 .logo-img{
 
-width:85px;
-height:85px;
+width:100px;
+height:100px;
 
 background:white;
 
-padding:6px;
+padding:8px;
 
 border-radius:12px;
 
-box-shadow:0 6px 15px rgba(0,0,0,0.6);
-
 }
 
-/* MENU */
-
-nav ul{
-
-display:flex;
-gap:25px;
-
-list-style:none;
-
-}
-
-nav ul li a{
-
-color:white;
-
-text-decoration:none;
-
-font-weight:500;
-
-transition:0.3s;
-
-padding:6px 10px;
-
-border-radius:6px;
-
-}
-
-nav ul li a:hover{
-
-background:#00eaff;
-
-color:black;
-
-}
-
-/* ========================= */
 /* HERO */
-/* ========================= */
 
 .hero{
 
@@ -141,40 +85,22 @@ text-align:center;
 
 padding:40px;
 
-animation:fadeIn 2s ease;
-
 }
 
-/* FOTO PERFIL */
+/* FOTO */
 
 .foto-perfil{
 
-width:210px;
-height:210px;
+width:260px;
+height:260px;
 
 border-radius:50%;
 
-border:6px solid #00eaff;
-
-margin-bottom:25px;
-
-object-fit:cover;
-
-box-shadow:0 12px 35px rgba(0,0,0,0.8);
-
-animation:aparecer 2s ease;
-
-}
-
-/* TITULO */
-
-.hero h1{
-
-font-size:52px;
-
-color:#00eaff;
+border:8px solid #00eaff;
 
 margin-bottom:20px;
+
+box-shadow:0 12px 35px rgba(0,0,0,0.7);
 
 }
 
@@ -188,380 +114,142 @@ font-size:21px;
 
 line-height:1.9;
 
-color:#e0f7ff;
+}
+
+/* HERRAMIENTAS */
+
+.tools{
+
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
 
 }
 
-/* ========================= */
-/* SECCIONES */
-/* ========================= */
+.tool{
 
-section{
+background:white;
+color:black;
 
-padding:90px 40px;
+padding:25px;
 
-animation:fadeIn 1.5s ease;
+border-radius:18px;
 
-}
-
-/* TITULOS */
-
-h2{
-
-font-size:38px;
-
-color:#00eaff;
+width:280px;
 
 text-align:center;
 
-margin-bottom:35px;
+box-shadow:0 12px 30px rgba(0,0,0,0.6);
+
+border:3px solid #00eaff;
 
 }
 
-/* ========================= */
-/* CARDS */
-/* ========================= */
+.tool img{
 
-.cards{
+width:130px;
+height:130px;
 
-display:flex;
+object-fit:contain;
 
-justify-content:center;
-
-flex-wrap:wrap;
-
-gap:35px;
+margin-bottom:15px;
 
 }
 
-/* CARD */
-
-.card{
-
-background:white;
-
-color:black;
-
-padding:30px;
-
-width:330px;
-
-border-radius:20px;
-
-box-shadow:0 15px 30px rgba(0,0,0,0.6);
-
-transition:0.3s;
-
-}
-
-.card:hover{
-
-transform:translateY(-12px) scale(1.02);
-
-box-shadow:0 20px 40px rgba(0,0,0,0.8);
-
-}
-
-/* ICONOS */
-
-.card i{
-
-font-size:42px;
-
-margin-bottom:12px;
-
-color:#0077ff;
-
-}
-
-/* ========================= */
-/* BOTONES */
-/* ========================= */
-
-.btn-doc{
-
-display:inline-block;
-
-margin-top:18px;
-
-padding:13px 24px;
-
-background:#00eaff;
-
-color:black;
-
-border-radius:30px;
-
-text-decoration:none;
-
-font-weight:bold;
-
-transition:0.3s;
-
-}
-
-.btn-doc:hover{
-
-background:#0077ff;
-
-color:white;
-
-transform:scale(1.05);
-
-}
-
-/* ========================= */
-/* GALERIA */
-/* ========================= */
+/* GALERIA SEMANAS */
 
 .galeria{
 
 display:flex;
-
-flex-wrap:wrap;
-
 justify-content:center;
-
-gap:25px;
+gap:30px;
+flex-wrap:wrap;
 
 margin-top:40px;
 
 }
 
-.galeria img{
+.semana{
 
-width:280px;
+background:white;
+color:black;
 
-height:200px;
+padding:25px;
 
-object-fit:cover;
+border-radius:18px;
 
-border-radius:15px;
+width:260px;
+
+text-align:center;
+
+border:3px solid #0077ff;
 
 box-shadow:0 10px 25px rgba(0,0,0,0.6);
 
-transition:0.3s;
+}
+
+.semana button{
+
+margin-top:15px;
+
+padding:12px 20px;
+
+background:linear-gradient(
+45deg,
+#00eaff,
+#0077ff
+);
+
+color:white;
+
+border:none;
+
+border-radius:25px;
+
+font-weight:bold;
+
+cursor:pointer;
 
 }
 
-.galeria img:hover{
+.semana button:hover{
 
 transform:scale(1.05);
 
 }
 
-/* ========================= */
-/* PROYECTOS */
-/* ========================= */
+/* CONTACTO */
 
-.proyectos{
+.contacto-box{
 
-display:flex;
+background:white;
+color:black;
 
-flex-wrap:wrap;
+padding:30px;
 
-justify-content:center;
+border-radius:18px;
 
-gap:30px;
-
-}
-
-/* ========================= */
-/* HABILIDADES */
-/* ========================= */
-
-.skills{
-
-max-width:650px;
+width:320px;
 
 margin:auto;
 
-}
-
-.skill{
-
-margin-bottom:25px;
-
-}
-
-.skill p{
-
-margin-bottom:8px;
-
-font-weight:bold;
-
-}
-
-/* BARRA */
-
-.barra{
-
-background:rgba(255,255,255,0.3);
-
-height:16px;
-
-border-radius:12px;
-
-overflow:hidden;
-
-}
-
-/* PROGRESO */
-
-.progreso{
-
-height:100%;
-
-background:#00eaff;
-
-border-radius:12px;
-
-animation:cargar 2.5s ease;
-
-}
-
-/* NIVELES */
-
-.p1{width:85%;}
-.p2{width:80%;}
-.p3{width:90%;}
-
-/* ========================= */
-/* CONTACTO */
-/* ========================= */
-
-#contacto .card{
-
 text-align:center;
 
+border:3px solid #00eaff;
+
 }
 
-/* ========================= */
 /* FOOTER */
-/* ========================= */
 
 footer{
 
 background:black;
 
+padding:25px;
+
 text-align:center;
 
-padding:28px;
-
-margin-top:50px;
-
-font-size:15px;
-
-opacity:0.95;
-
-}
-
-/* ========================= */
-/* ANIMACIONES */
-/* ========================= */
-
-@keyframes fadeIn{
-
-from{
-
-opacity:0;
-transform:translateY(40px);
-
-}
-
-to{
-
-opacity:1;
-transform:translateY(0);
-
-}
-
-}
-
-@keyframes aparecer{
-
-from{
-
-opacity:0;
-transform:scale(0.6);
-
-}
-
-to{
-
-opacity:1;
-transform:scale(1);
-
-}
-
-}
-
-@keyframes cargar{
-
-from{
-
-width:0;
-
-}
-
-}
-
-/* ========================= */
-/* RESPONSIVE */
-/* ========================= */
-
-@media(max-width:900px){
-
-.hero h1{
-
-font-size:40px;
-
-}
-
-.descripcion{
-
-width:90%;
-
-}
-
-nav{
-
-flex-direction:column;
-
-gap:12px;
-
-}
-
-nav ul{
-
-flex-wrap:wrap;
-
-justify-content:center;
-
-}
-
-}
-
-@media(max-width:500px){
-
-.card{
-
-width:90%;
-
-}
-
-.logo-img{
-
-width:65px;
-height:65px;
-
-}
-
-.foto-perfil{
-
-width:160px;
-height:160px;
-
-}
+margin-top:40px;
 
 }
