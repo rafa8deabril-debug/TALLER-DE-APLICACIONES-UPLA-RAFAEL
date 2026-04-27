@@ -1,27 +1,26 @@
+/* RESET */
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Segoe UI',sans-serif;
+font-family:'Segoe UI', 'Trebuchet MS', sans-serif;
 }
 
 /* FONDO */
 
 body{
 
-background:
-linear-gradient(
-rgba(15,32,39,0.6),
-rgba(32,58,67,0.6),
-rgba(44,83,100,0.6)
-),
-url("UPLA.jpg");
-
-background-size:cover;
-background-position:center;
-background-attachment:fixed;
+background: linear-gradient(
+135deg,
+#0f2027,
+#203a43,
+#2c5364
+);
 
 color:white;
+
+scroll-behavior:smooth;
 
 }
 
@@ -35,36 +34,79 @@ align-items:center;
 
 padding:20px 50px;
 
-background:rgba(0,0,0,0.8);
+background:rgba(0,0,0,0.65);
 
 position:sticky;
 top:0;
 
+backdrop-filter:blur(10px);
+
+z-index:1000;
+
 }
+
+/* LOGO */
 
 .logo{
 
 display:flex;
 align-items:center;
+
 gap:15px;
 
-font-size:23px;
+font-size:21px;
 font-weight:bold;
 
 color:#00eaff;
 
 }
 
+/* LOGO UPLA */
+
 .logo-img{
 
-width:95px;
-height:95px;
+width:70px;
+height:70px;
+
+object-fit:contain;
 
 background:white;
 
-padding:8px;
-
 border-radius:12px;
+
+padding:6px;
+
+box-shadow:0 6px 15px rgba(0,0,0,0.5);
+
+}
+
+/* MENU */
+
+nav ul{
+
+list-style:none;
+
+display:flex;
+
+gap:25px;
+
+}
+
+nav ul li a{
+
+color:white;
+
+text-decoration:none;
+
+font-weight:500;
+
+transition:0.3s;
+
+}
+
+nav ul li a:hover{
+
+color:#00eaff;
 
 }
 
@@ -72,12 +114,12 @@ border-radius:12px;
 
 .hero{
 
-min-height:95vh;
+min-height:90vh;
 
 display:flex;
 flex-direction:column;
-align-items:center;
 justify-content:center;
+align-items:center;
 
 text-align:center;
 
@@ -85,16 +127,70 @@ padding:40px;
 
 }
 
+/* FOTO PERFIL */
+
 .foto-perfil{
 
-width:240px;
-height:240px;
+width:190px;
+height:190px;
 
 border-radius:50%;
 
-border:7px solid #00eaff;
+object-fit:cover;
+
+border:6px solid #00eaff;
 
 margin-bottom:20px;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.7);
+
+}
+
+/* TITULO */
+
+.hero h1{
+
+font-size:48px;
+
+color:#00eaff;
+
+margin-bottom:18px;
+
+}
+
+/* DESCRIPCION */
+
+.descripcion{
+
+font-size:20px;
+
+width:70%;
+
+line-height:1.8;
+
+color:#e0f7ff;
+
+}
+
+/* SECCIONES */
+
+section{
+
+padding:80px 40px;
+
+text-align:center;
+
+}
+
+/* TITULOS */
+
+h2{
+
+font-size:34px;
+
+color:#00eaff;
+
+margin-bottom:30px;
 
 }
 
@@ -110,101 +206,89 @@ gap:30px;
 
 }
 
+/* CARD */
+
 .card{
 
 background:white;
+
 color:black;
 
-padding:25px;
+padding:30px;
 
-width:260px;
+width:320px;
 
-border-radius:18px;
+border-radius:20px;
 
-box-shadow:0 10px 25px rgba(0,0,0,0.6);
+box-shadow:0 12px 28px rgba(0,0,0,0.45);
+
+transition:0.3s;
+
+text-align:left;
 
 }
 
-/* BOTONES IMPORTANTES */
+/* HOVER */
+
+.card:hover{
+
+transform:translateY(-12px);
+
+box-shadow:0 18px 35px rgba(0,0,0,0.6);
+
+}
+
+/* BOTONES */
 
 .btn-doc{
 
 display:inline-block;
 
-margin-top:12px;
-margin-right:6px;
+margin-top:18px;
 
-padding:10px 16px;
+padding:12px 20px;
 
-background:linear-gradient(
-45deg,
-#00eaff,
-#0077ff
-);
+background:#00eaff;
 
-color:white;
+color:black;
 
-border-radius:25px;
+border-radius:30px;
 
 text-decoration:none;
 
 font-weight:bold;
 
+transition:0.3s;
+
 }
 
 .btn-doc:hover{
 
-transform:scale(1.05);
+background:#0077ff;
+
+color:white;
 
 }
 
-/* HERRAMIENTAS */
+/* UNIDADES */
 
-.tools{
+#unidad1{
 
-display:flex;
-justify-content:center;
-gap:40px;
-flex-wrap:wrap;
+background:rgba(0,0,0,0.25);
 
-}
+border-top:3px solid #00eaff;
 
-.tool{
-
-background:white;
-color:black;
-
-padding:25px;
-
-border-radius:18px;
-
-width:280px;
-
-text-align:center;
+border-bottom:3px solid #00eaff;
 
 }
 
-.tool img{
+#unidad2{
 
-width:120px;
-margin-bottom:10px;
+background:rgba(0,0,0,0.25);
 
-}
+border-top:3px solid #0077ff;
 
-/* CONTACTO */
-
-.contacto-box{
-
-background:white;
-color:black;
-
-padding:30px;
-
-border-radius:18px;
-
-width:320px;
-
-margin:auto;
+border-bottom:3px solid #0077ff;
 
 }
 
@@ -218,6 +302,8 @@ padding:25px;
 
 text-align:center;
 
-margin-top:40px;
+margin-top:50px;
+
+font-size:15px;
 
 }
